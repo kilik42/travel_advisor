@@ -2,6 +2,8 @@ import { View, Text,SafeAreaView,Image } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
 import Avatar from '../assets/avatar.png'
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+
 import React from 'react'
 
 const Discover = () => {
@@ -35,6 +37,8 @@ const Discover = () => {
 
 
         </View>
+
+
       
     </SafeAreaView>
   )
