@@ -38,6 +38,38 @@ const Discover = () => {
 
         </View>
 
+        <View className="flex-row items-center bg-white mx-4 rounded-xl py-1 px-4 shadow-lg mt-4">
+            <GooglePlacesAutocomplete 
+                placeholder="Search"
+                onPress={(data, details = null) => {
+                    // 'details' is provided when fetchDetails = true
+                    console.log(data, details);
+
+                }}
+                query={{
+                    key: '',
+                    language: 'en',
+                }}
+                styles={{
+                    textInput: {
+                        backgroundColor: '#eee',
+                        borderRadius: 20,
+                        fontWeight: '700',
+                        marginTop: 7,
+                    },
+                    textInputContainer: {
+                        backgroundColor: '#eee',
+                        borderRadius: 10,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        marginRight: 10,
+                    },
+                }}  
+                fetchDetails = {true}
+                
+                enablePoweredByContainer={false}
+            />
+        </View>
 
       
     </SafeAreaView>
